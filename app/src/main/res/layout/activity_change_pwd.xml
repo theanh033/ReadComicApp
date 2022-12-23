@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3d3d3"
+    tools:context=".ChangePwdActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progessBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Change your password."
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Current password*"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/cPwdCurrentPwd"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                android:hint="Enter your current password"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/verified"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/black"
+                android:text="Verified"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:id="@+id/verifiedNotice"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="Your account is not verified yet!"
+                android:textColor="#FF0303"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="New password*"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/cPwdNewPwd"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                android:hint="Enter your new password"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Confirm new password*"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/cPwdConfirmPwd"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                android:hint="Re-enter your new password"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <Button
+                android:id="@+id/changePwd"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/black"
+                android:text="Change password"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

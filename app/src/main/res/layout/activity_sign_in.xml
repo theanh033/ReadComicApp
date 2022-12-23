@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color3"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/loginEmail"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:drawableRight="@drawable/ic_baseline_alternate_email_24"
+        android:hint="Type your email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:hint="Type your password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/show_hide_pwd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_lock_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:text="Forgot your password ?"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+
+</LinearLayout>

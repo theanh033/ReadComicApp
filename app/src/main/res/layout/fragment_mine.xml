@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progessBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Username"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="User email"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:text="History"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:text="My List"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/mineChangePwd"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:text="Change Password"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/userLogOut"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:text="Log Out"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

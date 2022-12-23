@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color2"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Create account"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/signUpUsername"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:hint="Type your username"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/signUpEmail"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:drawableRight="@drawable/ic_baseline_alternate_email_24"
+        android:hint="Type your email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:hint="Type your password (0-9)"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/sign_up_show_hide_pwd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_lock_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+
+</LinearLayout>

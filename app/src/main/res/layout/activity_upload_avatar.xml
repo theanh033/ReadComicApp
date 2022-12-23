@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3d3d3"
+    tools:context=".UploadAvatarActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <TextView
+            android:id="@+id/title_upload_image"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Upload your profile picture."
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/choosePic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_upload_image"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Choose your picture"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@+id/choosePic"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border" />
+
+        <Button
+            android:id="@+id/uploadPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pic"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Upload your picture"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progessBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ReadComicApp</string>
+
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="mine">Mine</string>
+
+    <string name="signup"><u>Create account</u>.</string>
+    <string name="login">Already have an account ? <b>Login here</b>.</string>
+
+</resources>

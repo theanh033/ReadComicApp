@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color4"
+    tools:context=".ManageComicActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Add Comic"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Comic name"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/addComicName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            android:hint="Enter comic name"
+            android:textColor="@color/white"
+            android:textColorHint="#d3d3d3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Comic category"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/addComicCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            android:hint="Enter comic category"
+            android:textColor="@color/white"
+            android:textColorHint="#d3d3d3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Comic image url"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/addComicImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            android:hint="Enter comic image url"
+            android:textColor="@color/white"
+            android:textColorHint="#d3d3d3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addComic"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:text="Add comic"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/displayComic"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="@color/white"
+                android:text="Display comic"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="All Comic"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDisplayComic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:text="Log out"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

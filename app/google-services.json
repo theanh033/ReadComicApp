@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "754459225619",
+    "firebase_url": "https://comic-d3439-default-rtdb.firebaseio.com",
+    "project_id": "comic-d3439",
+    "storage_bucket": "comic-d3439.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754459225619:android:c84450b72942ca9dec99e6",
+        "android_client_info": {
+          "package_name": "theanh.android.comic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754459225619-2gvbmrlv5rot31es1iu05me0n86ev7vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-nV1uHGb1QbHHEZTU6yIro0xn-Rf7JWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754459225619-2gvbmrlv5rot31es1iu05me0n86ev7vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754459225619:android:83b944a3ca8ecb29ec99e6",
+        "android_client_info": {
+          "package_name": "theanh.android.readcomicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754459225619-2gvbmrlv5rot31es1iu05me0n86ev7vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-nV1uHGb1QbHHEZTU6yIro0xn-Rf7JWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754459225619-2gvbmrlv5rot31es1iu05me0n86ev7vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
