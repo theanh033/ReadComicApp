@@ -54,6 +54,108 @@
             </LinearLayout>
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/infoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desciption"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:paddingLeft="15dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/addToFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/favIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_favorite_border_24" />
+
+                <TextView
+                    android:layout_below="@+id/favIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My List"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:id="@+id/downIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_download_24"
+                    android:layout_marginLeft="12dp"/>
+
+                <TextView
+                    android:layout_below="@+id/downIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Downloads"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:id="@+id/shareIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_ios_share_24" />
+
+                <TextView
+                    android:layout_below="@+id/shareIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="6dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"

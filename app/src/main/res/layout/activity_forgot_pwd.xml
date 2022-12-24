@@ -35,5 +35,12 @@
         android:backgroundTint="@color/black"
         android:text="Reset password" />
 
+    <Button
+        android:id="@+id/backToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:text="Cancel" />
 
 </LinearLayout>

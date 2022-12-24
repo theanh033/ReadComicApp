@@ -39,6 +39,8 @@ public class ChangePwdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_pwd);
         getSupportActionBar().setTitle("Change Password");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
 
         edtCurrentPwd = findViewById(R.id.cPwdCurrentPwd);
         edtNewPwd = findViewById(R.id.cPwdNewPwd);
@@ -157,5 +159,11 @@ public class ChangePwdActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

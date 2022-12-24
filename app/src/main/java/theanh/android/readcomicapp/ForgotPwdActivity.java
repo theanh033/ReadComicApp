@@ -2,12 +2,15 @@ package theanh.android.readcomicapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,10 +24,11 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 public class ForgotPwdActivity extends AppCompatActivity {
 
     private EditText edtEmail;
-    private Button btnResetPwd;
+    private Button btnResetPwd, btnCancel;
     private FirebaseAuth authProfile;
     private final static String TAG = "ResetPwdActivity";
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,16 @@ public class ForgotPwdActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        btnCancel = findViewById(R.id.backToLogin);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ForgotPwdActivity.this, SignInActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                finish();
             }
         });
     }

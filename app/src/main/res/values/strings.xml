@@ -7,5 +7,6 @@
 
     <string name="signup"><u>Create account</u>.</string>
     <string name="login">Already have an account ? <b>Login here</b>.</string>
+    <string name="desciption">Application developed by team: Nguyen The Anh, Nguyen Huy Dat, Nguyen Minh Duc, Tran Ngoc Manh.</string>
 
 </resources>

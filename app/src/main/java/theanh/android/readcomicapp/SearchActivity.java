@@ -118,6 +118,10 @@ public class SearchActivity extends AppCompatActivity {
             if (comics.getName().toLowerCase().contains(newText.toLowerCase())) {
                 filterList.add(comics);
             }
+
+            if (comics.getCategory().toLowerCase().contains(newText.toLowerCase())) {
+                filterList.add(comics);
+            }
             searchAdapter.setFilterList(filterList);
         }
     }

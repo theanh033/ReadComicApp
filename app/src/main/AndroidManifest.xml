@@ -13,6 +13,13 @@
         android:theme="@style/Theme.ReadComicApp"
         tools:targetApi="31">
         <activity
+            android:name=".ChapterInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UploadAvatarActivity"
             android:exported="false">
             <meta-data

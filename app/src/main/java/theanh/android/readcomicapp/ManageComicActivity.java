@@ -91,21 +91,6 @@ public class ManageComicActivity extends AppCompatActivity {
                 String comicCategory = edtComicCategory.getText().toString().trim();
 
                 Comics comics = new Comics(comicId, comicName, comicImage, comicCategory);
-//                MarvelComics marvelComics = new MarvelComics(comicId, comicName, comicImage, comicCategory);
-//                DcComics dcComics = new DcComics(comicId, comicName, comicImage, comicCategory);
-//                OtherComic otherComic = new OtherComic(comicId, comicName, comicImage, comicCategory);
-
-//                if (comicCategory.equals("Marvel Comic")) {
-//                    addMarvelComic(marvelComics);
-//                }
-//
-//                if (comicCategory.equals("DC Comic")) {
-//                    addDCComic(dcComics);
-//                }
-//
-//                if (comicCategory.equals("Other Comic")) {
-//                    addOtherComic(otherComic);
-//                }
                 addComic(comics);
             }
         });
