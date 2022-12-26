@@ -1,6 +1,8 @@
 package theanh.android.readcomicapp.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import theanh.android.readcomicapp.ChangePwdActivity;
+import theanh.android.readcomicapp.ManageComicActivity;
 import theanh.android.readcomicapp.Object.Reader;
 import theanh.android.readcomicapp.R;
 import theanh.android.readcomicapp.SignInActivity;
@@ -114,16 +117,26 @@ public class MineFragment extends Fragment {
         });
     }
 
-
     private void logOut() {
         txvLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                authProfile.signOut();
-                Toast.makeText(requireContext(), "Logged out", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(requireContext(), SignInActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+                new AlertDialog.Builder(requireContext())
+                        .setTitle("Log out")
+                        .setMessage("Are you sure you want to sign out?")
+                        .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseAuth auth = FirebaseAuth.getInstance();
+                                auth.signOut();
+                                Toast.makeText(requireContext(), "Logged out", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(requireContext(), SignInActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
             }
         });
     }

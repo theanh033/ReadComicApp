@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +29,13 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Document;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import theanh.android.readcomicapp.Object.Reader;
 
@@ -38,7 +46,9 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView txvLogin;
     private ImageView imgShowHidePwd;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore fStore;
     private static final String TAG = "SignUpActivity";
+    String userID;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -54,6 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
         txvLogin = findViewById(R.id.login);
         imgShowHidePwd = findViewById(R.id.sign_up_show_hide_pwd);
         mAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
 
         showHidePwd();
         inItUi();
@@ -143,13 +154,20 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
+//                                userID = mAuth.getCurrentUser().getUid();
+//                                DocumentReference documentReference = fStore.collection("users").document(userID);
+//                                documentReference.set(reader.map()).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                    @Override
+//                                    public void onSuccess(Void unused) {
+//                                        Log.d(TAG, "onSuccess: user Profile is created for" + userID);
+//                                    }
+//                                });
                                 Toast.makeText(SignUpActivity.this, "You can log in now.", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(SignUpActivity.this, "Sign up fail! Please try again.", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-
                     finish();
                 } else {
                     try {

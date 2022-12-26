@@ -1,5 +1,8 @@
 package theanh.android.readcomicapp.Object;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Reader {
     private String userName;
     private String userEmail;
@@ -26,5 +29,13 @@ public class Reader {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    public Map<String, Object> map() {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("name", userName);
+        hashMap.put("email", userEmail);
+
+        return hashMap;
     }
 }

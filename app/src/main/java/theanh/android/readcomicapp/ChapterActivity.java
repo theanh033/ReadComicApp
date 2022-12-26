@@ -4,9 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -24,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import theanh.android.readcomicapp.Adapter.ViewPagerChapterAdapter;
+import theanh.android.readcomicapp.Fragment.ExploreFragment;
 import theanh.android.readcomicapp.Object.Comics;
 
 public class ChapterActivity extends AppCompatActivity {
@@ -83,7 +90,6 @@ public class ChapterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(comicName);
         comicChapterName.setText(comicName);
         comicChapterCategory.setText(comicCategory);
-
         Glide.with(this).load(comicImage).into(comicChapterImg);
     }
 

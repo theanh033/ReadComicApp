@@ -108,8 +108,8 @@ public class UploadAvatarActivity extends AppCompatActivity {
                         }
                     });
                     Toast.makeText(UploadAvatarActivity.this, "Upload successful!", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(UploadAvatarActivity.this, MainActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(UploadAvatarActivity.this, MainActivity.class);
+                    startActivity(intent);
                     finish();
                 }
             }).addOnFailureListener(new OnFailureListener() {

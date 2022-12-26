@@ -295,11 +295,21 @@ public class ManageComicActivity extends AppCompatActivity {
     }
 
     private void logOut() {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signOut();
-        Toast.makeText(ManageComicActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(ManageComicActivity.this, SignInActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        new AlertDialog.Builder(ManageComicActivity.this)
+                .setTitle("Log out")
+                .setMessage("Are you sure you want to sign out?")
+                .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseAuth auth = FirebaseAuth.getInstance();
+                        auth.signOut();
+                        Toast.makeText(ManageComicActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ManageComicActivity.this, SignInActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
     }
 }

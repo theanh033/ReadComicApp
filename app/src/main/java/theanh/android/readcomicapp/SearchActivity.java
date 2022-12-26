@@ -102,7 +102,6 @@ public class SearchActivity extends AppCompatActivity {
                     Comics comics = dataSnapshot.getValue(Comics.class);
                     comicsList.add(comics);
                 }
-                searchAdapter.setDisplayData(comicsList);
             }
 
             @Override
@@ -117,9 +116,7 @@ public class SearchActivity extends AppCompatActivity {
         for (Comics comics : comicsList) {
             if (comics.getName().toLowerCase().contains(newText.toLowerCase())) {
                 filterList.add(comics);
-            }
-
-            if (comics.getCategory().toLowerCase().contains(newText.toLowerCase())) {
+            } if (comics.getCategory().toLowerCase().contains(newText.toLowerCase())) {
                 filterList.add(comics);
             }
             searchAdapter.setFilterList(filterList);

@@ -56,4 +56,9 @@ dependencies {
 
     //Banner
     implementation 'me.relex:circleindicator:2.1.6'
+
+    //Splash
+    dependencies {
+        implementation 'com.airbnb.android:lottie:3.4.2'
+    }
 }
